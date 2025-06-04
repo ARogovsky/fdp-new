@@ -24,31 +24,26 @@ const AboutSection = ({ onOpenSurvey }: AboutSectionProps) => {
     <section id="about" className="py-20 relative">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-          Повернення коштів
+          Chargeback або повернення коштів за невиконану послугу
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              Компанія «FDP» працює на ринку відновлення фінансових
-              втрат уже більше десяти років. За цей період ми допомогли тисячам клієнтів
-              повернути їхні кошти після шахрайства та інших незаконних дій.
-              Наш багатий досвід, високий професіоналізм наших юристів та
-              індивідуальний підхід дозволяють нам добиватися успішного результату в
-              більш ніж 90% випадків.
+              Організація FDP працює у сфері повернення коштів, особливо в криптовалютній сфері. За цей період ми допомогли тисячам клієнтів повернути їхні кошти після шахрайства та інших незаконних дій. Наш багатий досвід, високий професіоналізм та індивідуальний підхід дозволяють нам добиватися успішного результату в більш ніж 90% випадків.
             </p>
             <div className="flex items-center space-x-4 mb-10">
-              <div className="relative h-16 w-16 rounded-full overflow-hidden">
+              <div className="relative h-16 w-16 rounded-[50%] overflow-hidden">
                 <Image
-                  src="/images/anna.jpg"
-                  alt="Анна Чернова"
+                  src="/images/nataly.png"
+                  alt="Наталія Кокоріна"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded"
                 />
               </div>
               <div>
-                <h4 className="text-white font-semibold">Анна Чернова</h4>
-                <p className="text-gray-400 text-sm">Засновниця і керівниця «FDP Ukraine»</p>
+                <h4 className="text-white font-semibold">Наталія Кокоріна</h4>
+                <p className="text-gray-400 text-sm">Засновниця та голова ГО "Виявлення та запобігання шахрайству Україніа"</p>
               </div>
             </div>
             <h3 className="text-2xl font-bold text-white mb-6">
