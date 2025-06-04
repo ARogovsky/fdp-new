@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import HeroSection from "@/components/home/HeroSection";
-import AboutSection from "@/components/home/AboutSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
+import dynamic from "next/dynamic";
 import ContactForm from "@/components/home/ContactForm";
 import SurveyForm from "@/components/home/SurveyForm";
+
+const HeroSection = dynamic(() => import("@/components/home/HeroSection"));
+const AboutSection = dynamic(() => import("@/components/home/AboutSection"));
+const TestimonialsSection = dynamic(() => import("@/components/home/TestimonialsSection"));
 
 export default function Home() {
   const [isSurveyOpen, setIsSurveyOpen] = useState(false);
