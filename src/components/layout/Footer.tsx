@@ -66,6 +66,12 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} FDP. Всі права захищені.
           </p>
         </div>
+
+        <div className="mt-8 text-center text-gray-400 text-xs">
+          <p>
+            Цей сайт не є офіційним представником Visa, Mastercard, OLX, Binance, Justmarkets, НБУ. Ми не пов'язані з цими компаніями. Усі права на бренди належать їхнім власникам.
+          </p>
+        </div>
       </div>
     </footer>
   );
