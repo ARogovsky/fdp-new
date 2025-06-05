@@ -1,13 +1,14 @@
 "use client";
 
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ClientBody } from "./ClientBody";
 import { useEffect } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], preload: true });
+const roboto = Roboto({ subsets: ["latin"], preload: true });
 
 // Metadata needs to be moved to a separate file for client components
 const siteTitle = "STOP FRAUD - Допомога у поверненні коштів від недобросовісних брокерів";
