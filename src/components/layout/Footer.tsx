@@ -9,7 +9,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div>
-            <Image src="/images/brand/fdp-logo.svg" alt="FDP Logo" width={100} height={40} className="mb-4" />
+            <Image
+              src="/images/brand/fdp-logo.svg"
+              alt="FDP Logo"
+              width={100}
+              height={40}
+              priority
+              className="mb-4"
+            />
             <p className="text-gray-300 text-sm">
               Успішне повернення ваших коштів у більш ніж 90% випадків.
             </p>
