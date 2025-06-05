@@ -92,8 +92,9 @@ const TestimonialsSection = () => {
                         <Image
                           src={testimonial.image}
                           alt={testimonial.name}
-                          fill
-                          className="object-cover"
+                          width={64}
+                          height={64}
+                          className="object-cover rounded-full"
                         />
                       </div>
                       <div>
