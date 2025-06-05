@@ -14,8 +14,9 @@ import {
 
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 
-const Form = FormProvider
+const FormProviderWrapper = FormProvider
 
 type FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
@@ -28,7 +29,7 @@ const FormFieldContext = React.createContext<FormFieldContextValue>(
   {} as FormFieldContextValue
 )
 
-const FormField = <
+const FormFieldWrapper = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 >({
@@ -72,7 +73,7 @@ const FormItemContext = React.createContext<FormItemContextValue>(
   {} as FormItemContextValue
 )
 
-const FormItem = React.forwardRef<
+const FormItemWrapper = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
@@ -84,7 +85,7 @@ const FormItem = React.forwardRef<
     </FormItemContext.Provider>
   )
 })
-FormItem.displayName = "FormItem"
+FormItemWrapper.displayName = "FormItemWrapper"
 
 const FormLabel = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
@@ -103,7 +104,7 @@ const FormLabel = React.forwardRef<
 })
 FormLabel.displayName = "FormLabel"
 
-const FormControl = React.forwardRef<
+const FormControlWrapper = React.forwardRef<
   React.ElementRef<typeof Slot>,
   React.ComponentPropsWithoutRef<typeof Slot>
 >(({ ...props }, ref) => {
@@ -123,7 +124,7 @@ const FormControl = React.forwardRef<
     />
   )
 })
-FormControl.displayName = "FormControl"
+FormControlWrapper.displayName = "FormControlWrapper"
 
 const FormDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -142,7 +143,7 @@ const FormDescription = React.forwardRef<
 })
 FormDescription.displayName = "FormDescription"
 
-const FormMessage = React.forwardRef<
+const FormMessageWrapper = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, children, ...props }, ref) => {
@@ -164,15 +165,13 @@ const FormMessage = React.forwardRef<
     </p>
   )
 })
-FormMessage.displayName = "FormMessage"
+FormMessageWrapper.displayName = "FormMessageWrapper"
 
 export {
   useFormField,
-  Form,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-  FormField,
+  FormProviderWrapper as Form,
+  FormItemWrapper as FormItem,
+  FormControlWrapper as FormControl,
+  FormMessageWrapper as FormMessage,
+  FormFieldWrapper as FormField,
 }

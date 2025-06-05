@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image"; // Import Image component
-import { Button } from "@/components/ui/button";
+import Button from "@/components/ui/button";
 import { MenuIcon, X } from "lucide-react";
 
 type HeaderProps = {

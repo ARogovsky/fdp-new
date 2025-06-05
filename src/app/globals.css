@@ -64,7 +64,7 @@
 
   body {
     @apply bg-background text-foreground dark;
-    background-image: url('/images/main-bg.png');
+    background-image: url('/images/main-bg.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
